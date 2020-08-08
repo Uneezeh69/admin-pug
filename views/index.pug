@@ -1,7 +1,11 @@
 extends layout
 
 block content
-  h1 Welcome to the Shop!
+  h1 Administrator Portal
+  if !user
+      h5 Login or Signup to view the inventory.
+  if user
+      h5 Navigate to Inventory.
   
   .container
-    img.image(src="https://cdn.shopify.com/s/files/1/1403/8979/t/1/assets/slide_1_1024x1024.jpg?v=10525153868611755069" width="800px", height="200px")
+    img.image(src="https://www.tracindia.org/assests/image/login.png" )

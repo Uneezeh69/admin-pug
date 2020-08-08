@@ -1,34 +1,34 @@
 var express = require('express');
 var router = express.Router();
-var User = require("../models/users");
+var Admin = require("../models/admin");
 
 /* GET users listing. */
 router.get('/signup', function(req, res, next) {
-  res.render("users/signup");
+  res.render("admin/signup");
 });
 
 router.get('/login', function(req, res, next) {
-  res.render("users/login");
+  res.render("admin/login");
 });
 
 router.get('/logout', function(req, res, next) {
-  req.session.user = null;
+  req.session.admin = null;
   res.redirect("/login");
 });
 
 router.post('/login', async function(req, res, next) {
-  let user = await User.findOne({
+  let admin = await Admin.findOne({
     email:req.body.email,
     password:req.body.password
   });
-  if(!user) return res.redirect("/login");
-  req.session.user = user;
+  if(!admin) return res.redirect("/login");
+  req.session.admin = admin;
   return res.redirect("/");
 });
 
 router.post('/signup', async function(req, res, next) {
-  let user = new User(req.body);
-  await user.save();
+  let admin = new Admin(req.body);
+  await admin.save();
   res.redirect("/");
 });
 

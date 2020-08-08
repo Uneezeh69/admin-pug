@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1, h5{
+  color: #016086;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}

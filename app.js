@@ -10,7 +10,7 @@ var sessionAuth = require("./middlewares/sessionAuth");
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
 var usersRouter = require('./routes/users');
-var detRouter = require('./routes/det');
+var adminRouter = require('./routes/admin');
 const { Mongoose } = require('mongoose');
 
 var app = express();
@@ -37,7 +37,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/', usersRouter);
-app.use('/det', detRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
