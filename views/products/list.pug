@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-6
+             h1=title
+             h6 Some available upon pre-order only.
+        .col-sm-6
+             a(href="/products/add", class="btn btn-info btn-lg float-left" ) Add in Inventory
+
+    table.table
+        thead
+            tr
+                th Name
+                th Price
+                th Quantity
+                th To Select
+        
+        tbody
+            each product in products
+                tr
+                    td= product.name
+                    td= product.price
+                    td= product.quantity
+                    td
+                        a(href="/products/update/" + product._id, class="btn btn-primary") Update Item
+                        a(href="/products/delete/" + product._id, class="btn btn-danger") Remove Item
+                        a(href="/products/cart/" + product._id, class="btn btn-success" ) Add To Cart
+                        
+                    
+                    
+                    
