@@ -6,29 +6,3 @@ body {
 a {
   color: #00B7FF;
 }
-p, h5{
-  font-size: 20px;
-  color: rgb(252, 113, 233);
-  font-family: 'Chilanka', cursive;
-  text-align: center;
-}
-
-h1{
-  color: rgb(252, 113, 233);
-  font-family: 'Chilanka', cursive;
-  text-align: center;
-  font-size: 3em;
-}
-
-.imgH{
-  width: 900px;
-  height: 300px;
-}
-
-.navbar{
-  background-color: palevioletred !important;
-}
-
-.detImg{
-  width: 300px;
-}
