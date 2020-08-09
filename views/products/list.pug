@@ -2,12 +2,10 @@ extends ../layout
 
 block content
     .row
-        .col-sm-6
+        .col-sm-12
              h1=title
-             
-        .col-sm-6
-             a(href="/products/add", class="btn btn-info btn-lg float-left" ) Add in Inventory
-
+             h6 Some available upon pre-order only.
+       
     table.table
         thead
             tr
@@ -23,9 +21,7 @@ block content
                     td= product.price
                     td= product.quantity
                     td
-                        a(href="/products/update/" + product._id, class="btn btn-primary") Update Item
-                        a(href="/products/delete/" + product._id, class="btn btn-danger") Remove Item
-                       
+                        a(href="/products/cart/" + product._id, class="btn btn-success" ) Add To Cart
                         
                     
                     
